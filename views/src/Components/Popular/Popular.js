@@ -1,4 +1,4 @@
-import React from 'react';
+import styles from './Popular.module.scss';
 
 const Popular = () => {
     return (

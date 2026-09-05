@@ -11,12 +11,9 @@ const Popular = (props) => {
             <Button text="<" style={{ position: 'grid' }} />
             {
                 imgs.map((src, i) => (
-                    if (i == 1) {
-                        button <
-                    } else if (i == maximum.size) {
-                        button >
-                    }
+                    i === 1 ? "<" : none
                     <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
+                    i === maximum.size ? ">" : none
                 ))
             }
             <Button text=">" style={{ position: 'grid' }} />

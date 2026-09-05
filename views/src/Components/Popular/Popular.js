@@ -12,8 +12,7 @@ const Popular = (props) => {
                 imgs.map((src, i) => (
                     i === 1 ? <Button text="<" style={{ position: 'grid' }} /> :
                     i === imgs.length ? <Button text=">" style={{ position: 'grid' }} /> : 
-                    null
-                    // <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
+                    <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
                     // i === imgs.length ? ">" : none
                 ))
             }

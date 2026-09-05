@@ -1,10 +1,10 @@
-import styles from './Dev.module.scss';
+import React from 'react';
 
 const Dev = (props) => {
     return (
-        <dev className={styles.dev} style={props.style}>
-            {props.text}
-        </dev>
+        <div>
+            {props.img}
+        </div>
     );
 }
 

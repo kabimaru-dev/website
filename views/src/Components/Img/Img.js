@@ -6,9 +6,6 @@ const Img = (props) => {
         <Dev img={
             <img style={props.style} key={props.key} src={props.src} alt={props.alt} height={props.height} width={props.width}/>
         } />
-        // <div className={styles.img}>
-        //     <img style={props.style} key={props.key} src={props.src} alt={props.alt} height={props.height} width={props.width}/>
-        // </div>
     );
 }
 

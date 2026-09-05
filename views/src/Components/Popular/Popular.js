@@ -8,15 +8,15 @@ const imgs = [initialD, initialD, initialD, initialD, initialD, initialD, initia
 const Popular = (props) => {
     return (
         <div>
-            <Button text="<" style={{ position: 'grid' }} />
             {
                 imgs.map((src, i) => (
-                    i === 1 ? "<" : none
-                    <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
-                    i === maximum.size ? ">" : none
+                    i === 1 ? <Button text="<" style={{ position: 'grid' }} /> :
+                    i === imgs.length ? <Button text=">" style={{ position: 'grid' }} /> : 
+                    null
+                    // <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
+                    // i === imgs.length ? ">" : none
                 ))
             }
-            <Button text=">" style={{ position: 'grid' }} />
         </div>
     );
 }

@@ -1,10 +1,12 @@
 import styles from './Button.module.scss';
 
-const Button = () => {
+function protagonist(){
+    console.log("Now, i am protagonist");
+}
+
+const Button = (props) => {
     return (
-        <div>
-            Button
-        </div>
+        <button onClick={props.onClick}>{props.text}{props.protagonist}</button>
     );
 }
 

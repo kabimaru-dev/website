@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Background from './Components/Background/Background';
 import Button from './Components/Button/Button';
 import Head from './Components/Head/Head';
@@ -9,12 +9,13 @@ import SearchBar from './Components/SearchBar/SearchBar';
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Background />
-        <Head />
-        <Popular />
-        <Main />
-      </div>
+      <Background />
+      <Head />
+      <Router>
+        <Route path='/' element={<Popular />} />
+        <Route path='/anime/:id' element={<Anime />} />
+      </Router>
+      <Main />
     </BrowserRouter>
   );
 }

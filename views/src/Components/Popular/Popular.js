@@ -5,7 +5,7 @@ import Img from '../Img/Img';
 
 const imgs = [initialD, initialD, initialD, initialD, initialD, initialD, initialD, initialD];
 
-function Popular(props) {
+function Popular() {
     return (
         <div>
             {
@@ -13,7 +13,7 @@ function Popular(props) {
                     if(i === 0){
                         return (
                             <>
-                                <Button text="<" style={{ position: 'grid' }} />
+                                <Button text="<" style={{ position: 'absolute' }} />
                                 <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
                             </>
                         );
@@ -23,7 +23,7 @@ function Popular(props) {
                         return (
                             <>
                                 <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
-                                <Button text=">" style={{ position: 'grid' }} />
+                                <Button text=">" style={{ position: 'absolute' }} />
                             </>
                         );
                     } else {

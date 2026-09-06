@@ -3,20 +3,25 @@ import initialD from '../../img/Initial D.jpg';
 import Button from '../Button/Button';
 import Img from '../Img/Img';
 
-const imgs = [initialD, initialD, initialD, initialD, initialD, initialD, initialD];
+const imgs = [initialD, initialD, initialD, initialD, initialD, initialD, initialD, initialD, initialD, initialD];
 
-const Popular = (props) => {
+function Popular(props) {
     return (
         <div>
             {
-                imgs.map((src, i) => (
-                    i === 0 ? <Button text="<" style={{ position: 'grid' }} /> :
-                    i === imgs.length-2 ? <Button text=">" style={{ position: 'grid' }} /> : 
-                    <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
-                ))
+                imgs.map((src, i) => {
+                    if(i === 0){
+                        return <Button text="<" style={{ position: 'grid' }} />
+                    }
+                    else if (i === imgs.length-2) {
+                        return <Button text=">" style={{ position: 'grid' }} />
+                    } else {
+                        return <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
+                    }
+                } )
             }
         </div>
-    );
+    );   
 }
 
 export default Popular;

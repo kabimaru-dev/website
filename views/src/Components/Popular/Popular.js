@@ -5,6 +5,10 @@ import Img from '../Img/Img';
 
 const imgs = [initialD, initialD, initialD, initialD, initialD, initialD, initialD, initialD];
 
+const handleClick = () => {
+    alert("You click it");
+}
+
 function Popular() {
     return (
         <div>
@@ -14,7 +18,7 @@ function Popular() {
                         return (
                             <>
                                 <Button text="<" style={{ position: 'absolute' }} />
-                                <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
+                                <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} onClick={handleClick} />
                             </>
                         );
                         
@@ -22,12 +26,12 @@ function Popular() {
                     else if (i === imgs.length-2) {
                         return (
                             <>
-                                <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
+                                <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} onClick={handleClick} />
                                 <Button text=">" style={{ position: 'absolute' }} />
                             </>
                         );
                     } else {
-                        return <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} />
+                        return <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} onClick={handleClick} />
                     }
                 } )
             }

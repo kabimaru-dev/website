@@ -1,10 +1,20 @@
 import styles from './Img.module.scss';
 import Dev from '../Dev/Dev';
+import { Link, replace } from 'react-router-dom';
 
 const Img = (props) => {
     return (
         <Dev img={
-            <img style={props.style} key={props.key} src={props.src} alt={props.alt} height={props.height} width={props.width} onClick={props.onClick} />
+            <Link to={`/anime/${props.alt}`} replace = {true}>
+                <img 
+                    style={props.style} 
+                    key={props.key} 
+                    src={props.src} 
+                    alt={props.alt} 
+                    height={props.height} 
+                    width={props.width} 
+                />
+            </Link>
         } />
     );
 }

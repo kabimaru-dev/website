@@ -2,14 +2,13 @@ import styles from './Popular.module.scss';
 import initialD from '../../img/Initial D.jpg';
 import Button from '../Button/Button';
 import Img from '../Img/Img';
+import { Link } from 'react-router-dom';
 
 const imgs = [initialD, initialD, initialD, initialD, initialD, initialD, initialD, initialD];
 
-const handleClick = () => {
-    alert("You click it");
-}
-
 function Popular() {
+    let i = 0;
+    i++;
     return (
         <div>
             {
@@ -18,7 +17,14 @@ function Popular() {
                         return (
                             <>
                                 <Button text="<" style={{ position: 'absolute' }} />
-                                <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} onClick={handleClick} />
+                                <Img 
+                                    style={{ left: '100px' }} 
+                                    key={i} 
+                                    src={src} 
+                                    alt={`InitialD${i}`} 
+                                    height={'300px'} 
+                                    width={'200px'} 
+                                />
                             </>
                         );
                         
@@ -26,12 +32,26 @@ function Popular() {
                     else if (i === imgs.length-2) {
                         return (
                             <>
-                                <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} onClick={handleClick} />
+                                <Img 
+                                    style={{ left: '100px' }} 
+                                    key={i} 
+                                    src={src} 
+                                    alt={`InitialD${i}`} 
+                                    height={'300px'} 
+                                    width={'200px'} 
+                                />
                                 <Button text=">" style={{ position: 'absolute' }} />
                             </>
                         );
                     } else {
-                        return <Img style={{ left: '100px' }} key={i} src={src} alt={'Initial D'} height={'300px'} width={'200px'} onClick={handleClick} />
+                        return <Img 
+                                    style={{ left: '100px' }} 
+                                    key={i} 
+                                    src={src} 
+                                    alt={`InitialD${i}`} 
+                                    height={'300px'} 
+                                    width={'200px'} 
+                                />
                     }
                 } )
             }

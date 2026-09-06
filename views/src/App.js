@@ -1,3 +1,4 @@
+import { BrowserRouter } from 'react-router-dom';
 import Background from './Components/Background/Background';
 import Button from './Components/Button/Button';
 import Head from './Components/Head/Head';
@@ -7,12 +8,14 @@ import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
   return (
-    <div>
-      <Background />
-      <Head />
-      <Popular />
-      <Main />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Background />
+        <Head />
+        <Popular />
+        <Main />
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,12 +1,12 @@
 import SearchBar from '../SearchBar/SearchBar';
 
-const Head = () => {
+const Header = () => {
     return (
         <div>
-            Head
+            Header
             <SearchBar />
         </div>
     );
 }
 
-export default Head;
+export default Header;

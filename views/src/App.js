@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Background from './Components/Background/Background';
 import Button from './Components/Button/Button';
-import Head from './Components/Head/Head';
+import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import Popular from './Components/Popular/Popular';
 import SearchBar from './Components/SearchBar/SearchBar';
@@ -14,7 +14,7 @@ function App() {
         <Route path='/' element={
             <>
               <Background />
-              <Head />
+              <Header />
               <Popular />
               <Main />
             </>
